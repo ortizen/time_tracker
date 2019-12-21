@@ -4,14 +4,12 @@ import 'package:time_tracker_flutter_course/app/services/auth_base.dart';
 
 class HomePage extends StatelessWidget {
   final AuthBase authBase;
-  final VoidCallback onSignOut;
 
-  HomePage({@required this.authBase, @required this.onSignOut});
+  HomePage({@required this.authBase});
 
   void _signOut() async {
     try {
       await authBase.signOut();
-      onSignOut();
     } catch (e) {
       print(e.toString());
     }

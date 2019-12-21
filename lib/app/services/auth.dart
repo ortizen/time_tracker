@@ -13,6 +13,7 @@ class Auth implements AuthBase {
     }
   }
 
+  @override
   Stream<User> get onAuthStateChanged {
     return _firebaseAuth.onAuthStateChanged.map(_userFromFirebase);
   }

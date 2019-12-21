@@ -6,4 +6,6 @@ abstract class AuthBase {
   Future<User> signInAnonymously();
 
   Future<void> signOut();
+
+  Stream<User> get onAuthStateChanged;
 }
